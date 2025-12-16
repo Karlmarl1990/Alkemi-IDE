@@ -1,0 +1,17 @@
+{
+  "nameShort": "Alkemi",
+  "nameLong": "Alkemi IDE",
+  "applicationName": "alkemi-ide",
+  "dataFolderName": ".alkemi-ide",
+  "win32MutexName": "alkemi-ide",
+  "licenseName": "MIT",
+  "licenseUrl": "https://github.com/Karlmarl1990/Alkemi-IDE/blob/main/LICENSE",
+  "reportIssueUrl": "https://github.com/Karlmarl1990/Alkemi-IDE/issues/new",
+  "extensionsGallery": {
+    "serviceUrl": "https://open-vsx.org/vscode/gallery",
+    "itemUrl": "https://open-vsx.org/vscode/item"
+  },
+  "linkProtectionTrustedDomains": [
+    "https://open-vsx.org"
+  ]
+}
