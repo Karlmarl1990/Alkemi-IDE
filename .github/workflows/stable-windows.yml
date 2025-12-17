@@ -14,7 +14,6 @@ jobs:
       CI_BUILD: no
       ASSETS_REPOSITORY: ${{ github.repository }}
       MS_TAG: "1.95.3"
-      MS_COMMIT: "f1a4fb981f49533d7c6d6ae35073805ee8a00219"
     
     steps:
       - uses: actions/checkout@v4
@@ -34,23 +33,18 @@ jobs:
           npm install -g node-gyp
 
       # -------------------------------------------------------
-      # ??????? ?????? ???: ????? ???? ????? ?? ???????? ??????
+      # ???? ??????: ????? ?????? 1.95.3 ?????? ????? ?????
       # -------------------------------------------------------
-      - name: Manual Clone VS Code (Bypass Network Check)
+      - name: Clone VS Code v1.95.3 Directly
         shell: bash
         run: |
-          echo "?? Manually cloning VS Code 1.95.3..."
-          git clone https://github.com/microsoft/vscode.git vscode
-          cd vscode
-          git checkout f1a4fb981f49533d7c6d6ae35073805ee8a00219
-          cd ..
-          echo "? Source code ready."
+          echo "?? Cloning VS Code version 1.95.3..."
+          git clone --branch 1.95.3 --depth 1 https://github.com/microsoft/vscode.git vscode
+          echo "? Source code 1.95.3 ready."
 
       - name: Prepare Build
         shell: bash
         run: |
-          # ?? ??? ./get_repo.sh ???? ???? ???????
-          # ???? ????? ????? ???????
           ./prepare_vscode.sh
 
       - name: Build Alkemi
