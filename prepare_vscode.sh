@@ -138,17 +138,14 @@ echo "ORG_NAME=\"${ORG_NAME}\""
 echo "TUNNEL_APP_NAME=\"${TUNNEL_APP_NAME}\""
 
 if [[ "${DISABLE_UPDATE}" == "yes" ]]; then
-  mv ../patches/disable-update.patch.yet ../patches/disable-update.patch
 fi
 
-for file in ../patches/*.patch; do
   if [[ -f "${file}" ]]; then
     apply_patch "${file}"
   fi
 done
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  for file in ../patches/insider/*.patch; do
     if [[ -f "${file}" ]]; then
       apply_patch "${file}"
     fi
@@ -156,14 +153,12 @@ if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
 fi
 
 if [[ -d "../patches/${OS_NAME}/" ]]; then
-  for file in "../patches/${OS_NAME}/"*.patch; do
     if [[ -f "${file}" ]]; then
       apply_patch "${file}"
     fi
   done
 fi
 
-for file in ../patches/user/*.patch; do
   if [[ -f "${file}" ]]; then
     apply_patch "${file}"
   fi

@@ -218,3 +218,5 @@ The minimal version is limited by the core component Electron, you may want to c
 ## <a id="license"></a>License
 
 [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
+
+Full Cleanup Triggered: 12/17/2025 06:13:19
