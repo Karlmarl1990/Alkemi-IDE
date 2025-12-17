@@ -8,3 +8,4 @@ export GH_REPO_PATH="Karlmarl1990/Alkemi-IDE"
 export ORG_NAME="Alkemi"
 export TUNNEL_APP_NAME="alkemi-tunnel"
 echo "Variables set successfully. Moving to build stage."
+npm install -g typescript
